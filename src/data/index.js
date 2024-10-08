@@ -5,7 +5,7 @@ import { teamMembers } from "./teamMembers";
 import { testimonialsData } from "./testimonialsData";
 import { blogsData } from "./BlogsData";
 import { newsData } from "./newsData";
-import { termsData } from "./TermsData";
+import { termsData } from "./termsData";
 import { privacyPolicyData } from "./privacyPolicyData";
 import { menu } from "./links";
 
