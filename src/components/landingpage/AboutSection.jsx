@@ -100,7 +100,7 @@ export default function AboutSection() {
             </ul>
             <div className="text-right pt-4">
               <Button size="lg" variant="" asChild>
-                <Link to="/">Get in touch</Link>
+                <Link to="/contact-us">Get in touch</Link>
               </Button>
             </div>
           </motion.div>

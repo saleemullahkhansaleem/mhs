@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
             </ul>
             <div className="pt-4">
               <Button size="lg" variant="" asChild>
-                <Link to="/">Get in touch</Link>
+                <Link to="/contact-us">Get in touch</Link>
               </Button>
             </div>
           </motion.div>

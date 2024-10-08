@@ -90,7 +90,9 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 1 }}
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
-            <Button size="lg">Get Started</Button>
+            <Button size="lg" asChild>
+              <Link to="/contact-us">Get Started</Link>
+            </Button>
           </motion.div>
         </div>
         <div className="absolute inset-0 bg-grid-white/[0.2] bg-[size:20px_20px] motion-safe:animate-grid-fade" />

@@ -4,6 +4,16 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "./ui/button";
 
+const menuLinks = [
+  { name: "Home", link: "/" },
+  { name: "Services", link: "/services" },
+  { name: "Portfolio", link: "/portfolio" },
+  { name: "About", link: "/about-us" },
+  { name: "Contact", link: "/contact-us" },
+  { name: "Blogs", link: "/blogs" },
+  { name: "Career", link: "/careers" },
+];
+
 export default function Header({ setDarkMode, darkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const toggleDarkMode = () => setDarkMode((prev) => !prev);
@@ -13,15 +23,7 @@ export default function Header({ setDarkMode, darkMode }) {
       <header className="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-background/60 backdrop-blur-md z-50 transition-colors duration-300">
         <LogoMHS />
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
-          {[
-            { name: "Home", link: "/" },
-            { name: "Services", link: "/services" },
-            { name: "Portfolio", link: "/portfolio" },
-            { name: "About", link: "/about-us" },
-            { name: "Contact", link: "/contact-us" },
-            { name: "Blogs", link: "/blogs" },
-            { name: "Career", link: "/careers" },
-          ].map(({ name, link }) => (
+          {menuLinks.map(({ name, link }) => (
             <NavLink
               key={name}
               to={link}
@@ -35,9 +37,12 @@ export default function Header({ setDarkMode, darkMode }) {
             </NavLink>
           ))}
         </nav>
-
-        <Button className="ml-4 hidden md:inline-flex" variant="outline">
-          Get Started
+        <Button
+          className="ml-4 hidden md:inline-flex"
+          variant="outline"
+          asChild
+        >
+          <Link to="/contact-us">Get Started</Link>
         </Button>
         <Button
           variant="ghost"
@@ -73,18 +78,23 @@ export default function Header({ setDarkMode, darkMode }) {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-30 bg-background pt-16 md:hidden"
           >
-            <nav className="flex flex-col items-center justify-center h-full space-y-8">
-              {["Services", "About", "Contact"].map((item) => (
-                <Link
-                  key={item}
-                  className="text-2xl font-medium hover:text-primary transition-colors"
-                  to="#"
+            <nav className="flex flex-col items-center justify-center h-full space-y-2">
+              {menuLinks.map((item) => (
+                <NavLink
+                  key={item.name}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-lg font-medium text-primary transition-colors py-2"
+                      : "text-lg font-medium hover:text-primary transition-colors py-2"
+                  }
+                  to={item.link}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
-                </Link>
+                  {item.name}
+                </NavLink>
               ))}
-              <Button className="mt-4" variant="">
-                Get Started
+              <Button variant="" asChild>
+                <Link to="/contact-us">Get Started</Link>
               </Button>
             </nav>
           </motion.div>
