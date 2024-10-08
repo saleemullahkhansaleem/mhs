@@ -1,16 +1,20 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaUser, FaTags, FaCalendarAlt } from "react-icons/fa";
 import { MoveRight } from "lucide-react";
+import { useRef } from "react";
 
-export default function BlogCard({post, index}) {
+export default function BlogCard({ post, index }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <motion.div
+      ref={ref}
       key={index}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 150 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="bg-primary/5 hover:bg-primary/10 rounded shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+      className="bg-primary/5 hover:bg-primary/10 rounded shadow-md hover:shadow-lg overflow-hidden flex flex-col justify-between group"
     >
       <div className="relative">
         <div className="absolute top-4 left-4 bg-background/70 px-3 py-1 rounded-full z-10 flex gap-2 items-center">

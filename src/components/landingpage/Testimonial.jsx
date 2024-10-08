@@ -1,10 +1,13 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "../ui/card";
 import { FaQuoteLeft } from "react-icons/fa";
 import { SectionContainer } from "..";
 import { testimonialsData } from "@/data";
+import { useRef } from "react";
 
 export default function TestimonialSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <SectionContainer
       id="testimonials-section"
@@ -16,9 +19,10 @@ export default function TestimonialSection() {
     >
       {testimonialsData.map((testimonial, index) => (
         <motion.div
+          ref={ref}
           key={index}
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 150 }}
+          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}
         >
           <Card className="bg-primary/5 hover:bg-primary/10 transition-all duration-300 shadow-lg">

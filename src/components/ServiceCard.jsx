@@ -1,18 +1,22 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Info, MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 export default function ServiceCard({
   service = { icon: Info, title: "", description: "", url: "/" },
   index = 0,
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <motion.div
-      key={index}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.3 }}
-      className="flex flex-col justify-between p-8  border-primary rounded-lg hover:text-white bg-primary/5 overflow-hidden relative group"
+      ref={ref}
+      initial={{ opacity: 0, y: 150 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
+      transition={{ duration: 0.5, delay: index * 0.15 }}
+      className="flex flex-col justify-between p-8 border-primary rounded-lg hover:text-white bg-primary/5 overflow-hidden relative group"
     >
       <div>
         <div className="mb-6 p-4 bg-primary/10 rounded transition-all duration-300 group-hover:bg-background/20 w-max">

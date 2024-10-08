@@ -1,20 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-// Social Links Data
-const socialLinks = [
-  { name: "Facebook", url: "https://facebook.com", icon: FaFacebookF },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: FaLinkedinIn },
-  { name: "YouTube", url: "https://youtube.com", icon: FaYoutube },
-  { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
-];
+import { menu } from "@/data";
+import { Heading } from "..";
 
 export default function HeroSection() {
   return (
@@ -37,7 +25,7 @@ export default function HeroSection() {
               transition={{ duration: 1.5 }}
               className="flex gap-4 justify-center"
             >
-              {socialLinks.map((link, index) => (
+              {menu.social.map((link, index) => (
                 <Link
                   key={index}
                   to={link.url}
@@ -61,14 +49,8 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0 }}
               className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none "
             >
-              Innovative{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 dark:from-purple-400 dark:to-blue-300">
-                Software Solutions
-              </span>{" "}
-              for a{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500 dark:from-purple-400 dark:to-blue-300">
-                Digital World
-              </span>
+              Innovative <Heading>Software Solutions</Heading> for a{" "}
+              <Heading>Digital World</Heading>
             </motion.h1>
 
             {/* Subheading */}

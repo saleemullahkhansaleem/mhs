@@ -1,45 +1,17 @@
 import { Link } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { BackToTopButton } from ".";
 import { LogoMHS } from "./Header";
-
-// Dynamic Data for Services, Company, Contact, and Social Links
-const servicesLinks = [
-  { name: "Web Development", path: "/services/web-development" },
-  { name: "Mobile App Development", path: "/services/mobile-app-development" },
-  {
-    name: "Portal Management Systems",
-    path: "/services/portal-management-systems",
-  },
-  { name: "E-commerce Solutions", path: "/services/e-commerce-solutions" },
-];
-
-const companyLinks = [
-  { name: "About Us", path: "/about-us" },
-  { name: "Careers", path: "/careers" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Contact Us", path: "/contact-us" },
-];
+import { menu } from "@/data";
 
 const contactInfo = [
-  { icon: FaEnvelope, text: "info@mhstechventure.com" },
-  { icon: FaPhone, text: "+123 456 7890" },
+  {
+    icon: FaEnvelope,
+    text: "info@mhstechventure.com",
+    path: "mailto:info@mhstechventure.com",
+  },
+  { icon: FaPhone, text: "+123 456 7890", path: "tel:+1234567890" },
   { icon: FaMapMarkerAlt, text: "123 Tech Avenue, Islamabad, Pakistan" },
-];
-
-const socialLinks = [
-  { name: "Facebook", url: "https://facebook.com", icon: FaFacebookF },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: FaLinkedinIn },
-  { name: "YouTube", url: "https://youtube.com", icon: FaYoutube },
-  { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
 ];
 
 export default function Footer() {
@@ -82,7 +54,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              {servicesLinks.map(({ name, path }) => (
+              {menu.services.map(({ name, path }) => (
                 <li key={name}>
                   <Link to={path} className="hover:underline">
                     {name}
@@ -95,7 +67,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {companyLinks.map(({ name, path }) => (
+              {menu.main.map(({ name, path }) => (
                 <li key={name}>
                   <Link to={path} className="hover:underline">
                     {name}
@@ -109,23 +81,34 @@ export default function Footer() {
         {/* Contact Info and Social Links */}
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <ul className="space-y-4">
-            {contactInfo.map(({ icon: Icon, text }) => (
-              <li key={text} className="flex items-center space-x-4">
-                <Icon className="mt-1 text-primary" size={20} />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="space-y-4">
+            {contactInfo.map(({ icon: Icon, text, path }) =>
+              path ? (
+                <Link
+                  to={path}
+                  key={text}
+                  className="flex items-center space-x-4"
+                >
+                  <Icon className="mt-1 text-primary" size={20} />
+                  <span>{text}</span>
+                </Link>
+              ) : (
+                <div key={text} className="flex items-center space-x-4">
+                  <Icon className="mt-1 text-primary" size={20} />
+                  <span>{text}</span>
+                </div>
+              )
+            )}
+          </div>
 
           {/* Social Links */}
           <div className="mt-6">
             <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              {socialLinks.map(({ name, url, icon: Icon }) => (
+              {menu.social.map(({ name, path, icon: Icon }) => (
                 <Link
                   key={name}
-                  to={url}
+                  to={path}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-white transition-colors"
@@ -143,13 +126,16 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4">
         <p className="text-sm">© 2024 MHS Tech Venture. All rights reserved.</p>
         <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
-          {["Terms of Service", "Privacy Policy"].map((item) => (
+          {[
+            { name: "Terms of Service", link: "/terms-of-services" },
+            { name: "Privacy Policy", link: "/privacy-policy" },
+          ].map((item) => (
             <Link
-              key={item}
+              key={item.name}
               className="text-sm hover:text-primary transition-colors"
-              to="#"
+              to={item.link}
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </nav>

@@ -12,7 +12,10 @@ import {
   Home,
   NotFound,
   PortfolioPage,
+  PrivacyPolicy,
   ServicesPage,
+  TermsOfServices,
+  WebDevelopment,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -25,8 +28,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "services",
+        path: "services/",
         element: <ServicesPage />,
+        children: [
+          {
+            path: "web-dev",
+            element: <WebDevelopment />,
+          },
+        ],
       },
       {
         path: "portfolio",
@@ -47,6 +56,14 @@ const router = createBrowserRouter([
       {
         path: "careers",
         element: <Careers />,
+      },
+      {
+        path: "terms-of-services",
+        element: <TermsOfServices />,
+      },
+      {
+        path: "privacy-policy",
+        element: <PrivacyPolicy />,
       },
       {
         path: "*",

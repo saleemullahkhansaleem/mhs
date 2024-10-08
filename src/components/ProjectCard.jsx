@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { MoveRight } from "lucide-react";
 
@@ -11,10 +12,13 @@ export default function ProjectCard({
   },
   index = 0,
 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 150 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
       className="relative overflow-hidden shadow-lg group"
     >

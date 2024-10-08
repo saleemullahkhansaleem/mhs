@@ -2,7 +2,7 @@ export const teamMembers = [
   {
     name: "Muhammad Hanif Shah",
     position: "Chief Executive Officer",
-    image: "/images/team/placeholder.webp",
+    image: "/images/team/mhs-profile.png",
     linkedin: "https://linkedin.com/in/johndoe",
     twitter: "https://twitter.com/johndoe",
     github: "https://github.com/johndoe",
@@ -18,7 +18,7 @@ export const teamMembers = [
   {
     name: "Mubashar Iftekhar",
     position: "Project Manager",
-    image: "/images/team/placeholder.webp",
+    image: "/images/team/mubashar-profile.png",
     linkedin: "https://linkedin.com/in/mikejohnson",
     twitter: "https://twitter.com/mikejohnson",
     github: "https://github.com/mikejohnson",
@@ -26,7 +26,7 @@ export const teamMembers = [
   {
     name: "Saleemullah Khan",
     position: "Project Manager",
-    image: "/images/team/placeholder.webp",
+    image: "/images/team/saleem-profile.png",
     linkedin: "https://linkedin.com/in/mikejohnson",
     twitter: "https://twitter.com/mikejohnson",
     github: "https://github.com/mikejohnson",

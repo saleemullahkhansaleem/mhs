@@ -3,16 +3,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "./ui/button";
-
-const menuLinks = [
-  { name: "Home", link: "/" },
-  { name: "Services", link: "/services" },
-  { name: "Portfolio", link: "/portfolio" },
-  { name: "About", link: "/about-us" },
-  { name: "Contact", link: "/contact-us" },
-  { name: "Blogs", link: "/blogs" },
-  { name: "Career", link: "/careers" },
-];
+import { menu } from "@/data";
 
 export default function Header({ setDarkMode, darkMode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,10 +14,10 @@ export default function Header({ setDarkMode, darkMode }) {
       <header className="px-4 lg:px-6 h-16 flex items-center fixed w-full bg-background/60 backdrop-blur-md z-50 transition-colors duration-300">
         <LogoMHS />
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
-          {menuLinks.map(({ name, link }) => (
+          {menu.main.map(({ name, path }) => (
             <NavLink
               key={name}
-              to={link}
+              to={path}
               className={({ isActive }) =>
                 isActive
                   ? "text-sm font-medium text-primary transition-colors"
@@ -79,7 +70,7 @@ export default function Header({ setDarkMode, darkMode }) {
             className="fixed inset-0 z-30 bg-background pt-16 md:hidden"
           >
             <nav className="flex flex-col items-center justify-center h-full space-y-2">
-              {menuLinks.map((item) => (
+              {menu.main.map((item) => (
                 <NavLink
                   key={item.name}
                   className={({ isActive }) =>
@@ -87,7 +78,7 @@ export default function Header({ setDarkMode, darkMode }) {
                       ? "text-lg font-medium text-primary transition-colors py-2"
                       : "text-lg font-medium hover:text-primary transition-colors py-2"
                   }
-                  to={item.link}
+                  to={item.path}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

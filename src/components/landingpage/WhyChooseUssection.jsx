@@ -1,7 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Heading } from "..";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const whyChooseUs = [
   {
@@ -27,13 +28,16 @@ const whyChooseUs = [
 ];
 
 export default function WhyChooseUs() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <section className="w-full py-8 md:py-12 px-4 md:px-6 bg-secondary/10 transition-colors duration-300">
       <div className="container mx-auto">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            ref={ref}
+            initial={{ opacity: 0, x: -150 }}
+            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -150 }}
             transition={{ duration: 0.5 }}
             className="space-y-6 order-2"
           >
@@ -44,8 +48,8 @@ export default function WhyChooseUs() {
               {whyChooseUs.map((item, index) => (
                 <motion.li
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -50 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex flex-col sm:flex-row items-start gap-4 text-lg group"
                 >
@@ -66,8 +70,8 @@ export default function WhyChooseUs() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 150 }}
+            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 150 }}
             transition={{ duration: 0.5 }}
             className="flex items-center justify-center gap-12 lg:justify-start"
           >
