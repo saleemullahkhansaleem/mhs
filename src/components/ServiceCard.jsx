@@ -15,7 +15,7 @@ export default function ServiceCard({
       ref={ref}
       initial={{ opacity: 0, y: 150 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
-      transition={{ duration: 0.5, delay: index * 0.15 }}
+      transition={{ duration: 0.5, delay: index * 0.05 }}
       className="flex flex-col justify-between p-8 border-primary rounded-lg hover:text-white bg-primary/5 overflow-hidden relative group"
     >
       <div>

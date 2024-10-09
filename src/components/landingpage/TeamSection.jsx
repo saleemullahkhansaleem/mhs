@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 import { Heading, SectionContainer } from "..";
 import { teamMembers } from "@/data";
@@ -7,7 +7,11 @@ import { Link } from "react-router-dom";
 
 export default function TeamSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, threshold: 0.01 });
+  useEffect(() => {
+    console.log("isInView", isInView);
+  }, [isInView]);
+
   return (
     <SectionContainer
       id="team-section"
@@ -20,8 +24,8 @@ export default function TeamSection() {
       {teamMembers.map((member, index) => (
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 150 }}
-          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           key={index}
           className="group relative overflow-hidden rounded max-w-72 mx-auto"
@@ -31,7 +35,7 @@ export default function TeamSection() {
             alt={member.name}
             className="w-full aspect-[3/4] object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-90 transition-opacity duration-300"></div>
           <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <h3 className="text-white text-2xl font-bold">{member.name}</h3>
             <p className="text-primary text-lg mb-4">{member.position}</p>
