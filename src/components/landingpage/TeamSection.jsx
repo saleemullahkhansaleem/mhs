@@ -24,7 +24,7 @@ export default function TeamSection() {
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 150 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           key={index}
-          className="group relative overflow-hidden rounded"
+          className="group relative overflow-hidden rounded max-w-72 mx-auto"
         >
           <img
             src={member.image}
