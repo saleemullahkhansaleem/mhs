@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { BackToTopButton } from ".";
 import { LogoMHS } from "./Header";
-import { menu } from "@/data";
+import { menu, servicesData } from "@/data";
+import { MoveRight } from "lucide-react";
 
 const contactInfo = [
   {
@@ -50,27 +51,36 @@ export default function Footer() {
         </div>
 
         {/* Services and Company Links */}
-        <div className="grid grid-cols-2">
-          <div>
+        <div className="grid grid-cols-12">
+          <div className="col-span-8">
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-3">
-              {menu.services.map(({ name, path }) => (
-                <li key={name}>
-                  <Link to={path} className="hover:underline">
-                    {name}
+              {servicesData.map(({ title, url }) => (
+                <li key={title}>
+                  <Link to={url} className="group/link flex items-center gap-2">
+                    <MoveRight size={16} className="text-primary" />
+                    <span className="group-hover/link:translate-x-2 transition-transform">
+                      {title}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-4">
             <h3 className="text-xl font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {menu.main.map(({ name, path }) => (
                 <li key={name}>
-                  <Link to={path} className="hover:underline">
-                    {name}
+                  <Link
+                    to={path}
+                    className="group/link flex items-center gap-2"
+                  >
+                    <MoveRight size={16} className="text-primary" />
+                    <span className="group-hover/link:translate-x-2 transition-transform">
+                      {name}
+                    </span>
                   </Link>
                 </li>
               ))}

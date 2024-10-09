@@ -1,9 +1,9 @@
 import { DetailsHeroSection, Heading, ServiceCard } from "@/components";
-import { webDevelopmentData } from "@/data";
+import { customSolutionsData } from "@/data";
 
-export default function WebDevelopmentPage() {
+export default function CustomSolutions() {
   const { title, description, features, process, technologies } =
-    webDevelopmentData;
+    customSolutionsData;
 
   return (
     <>
@@ -30,14 +30,13 @@ export default function WebDevelopmentPage() {
         </div>
 
         <h2 className="text-4xl font-bold mb-8 mt-12 text-center">
-          Our <Heading> Web Development </Heading> Process
+          Our <Heading> Custom Solutions </Heading> Process
         </h2>
 
         {/* Process Section */}
         <p className="text-muted-foreground max-w-3xl mx-auto text-center mb-8">
-          We follow a structured approach to ensure we meet your business goals
-          and deliver a website that aligns with your vision. Our process
-          includes:
+          Our custom software development process ensures that we meet your
+          unique business requirements effectively:
         </p>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {process.map((step, index) => (
@@ -51,8 +50,8 @@ export default function WebDevelopmentPage() {
 
         {/* Technologies Section */}
         <p className="text-muted-foreground max-w-3xl mx-auto text-center mb-8">
-          We work with a wide range of modern tools and technologies to deliver
-          the best results. These include:
+          We utilize a variety of modern technologies to deliver scalable and
+          high-performing custom solutions. Some of these include:
         </p>
 
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">

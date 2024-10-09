@@ -9,6 +9,15 @@ import { termsData } from "./termsData";
 import { privacyPolicyData } from "./privacyPolicyData";
 import { menu } from "./links";
 
+// Services Details
+
+import { webDevelopmentData } from "./services/webDevelopmentData";
+import { mobileAppDevelopmentData } from "./services/mobileAppDevelopmentData";
+import { portalManagementSystemsData } from "./services/portalManagementSystemsData";
+import { softwareConsultancyData } from "./services/softwareConsultancyData";
+import { ecommerceSolutionsData } from "./services/ecommerceSolutionsData";
+import { customSolutionsData } from "./services/customSolutionsData";
+
 export {
   servicesData,
   features,
@@ -20,4 +29,12 @@ export {
   termsData,
   privacyPolicyData,
   menu,
+
+  // Services Details
+  webDevelopmentData,
+  mobileAppDevelopmentData,
+  portalManagementSystemsData,
+  softwareConsultancyData,
+  ecommerceSolutionsData,
+  customSolutionsData,
 };

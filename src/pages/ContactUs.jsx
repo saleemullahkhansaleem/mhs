@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DetailsHeroSection, Heading } from "@/components";
+import { Link } from "react-router-dom";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -151,7 +152,9 @@ export default function ContactUs() {
           <p className="mb-6 text-lg">
             Reach out to us for any inquiries or to discuss your project ideas.
           </p>
-          <Button size="lg">Contact Us Today</Button>
+          {/* <Button size="lg" variant="outline" asChild>
+            <Link to="/contact-us">Contact Us Today</Link>
+          </Button> */}
         </div>
       </section>
     </div>

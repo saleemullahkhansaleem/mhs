@@ -23,18 +23,22 @@ export default function ServiceCard({
           <service.icon className="h-10 w-10 text-primary group-hover:text-white" />
         </div>
         <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-        <p className="text-muted-foreground group-hover:text-white mb-4">
-          {service.description}
-        </p>
+        {service.description && (
+          <p className="text-muted-foreground group-hover:text-white mb-4">
+            {service.description}
+          </p>
+        )}
       </div>
       <div className="absolute inset-0 w-0 group-hover:w-full -z-10 bg-primary transition-all duration-300"></div>
-      <Link
-        to={service.url}
-        className="group/link text-primary group-hover:text-white text-lg flex items-end gap-2 hover:font-bold"
-      >
-        Read more{" "}
-        <MoveRight className="group-hover/link:translate-x-2 transition-transform" />
-      </Link>
+      {service.url && (
+        <Link
+          to={service?.url}
+          className="group/link text-primary group-hover:text-white text-lg flex items-end gap-2 hover:font-bold"
+        >
+          Read more{" "}
+          <MoveRight className="group-hover/link:translate-x-2 transition-transform" />
+        </Link>
+      )}
     </motion.div>
   );
 }

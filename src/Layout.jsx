@@ -15,7 +15,7 @@ export default function Layout() {
 
   return (
     <main
-      className={`flex flex-col min-h-screen dark:text-white ${
+      className={`flex flex-col min-h-screen max-w-[100vw] overflow-hidden dark:text-white ${
         darkMode ? "dark" : ""
       }`}
     >

@@ -29,7 +29,7 @@ export default function TeamSection() {
           <img
             src={member.image}
             alt={member.name}
-            className="w-96 h-[500px] object-cover object-center"
+            className="w-full aspect-[3/4] object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
           <div className="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

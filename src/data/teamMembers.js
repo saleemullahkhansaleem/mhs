@@ -10,7 +10,7 @@ export const teamMembers = [
   {
     name: "Ehtesham Ahmed",
     position: "Lead Software Engineer",
-    image: "/images/team/ehtesham.png",
+    image: "/images/team/ehtesham-profile.png",
     linkedin: "https://linkedin.com/in/janesmith",
     twitter: "https://twitter.com/janesmith",
     github: "https://github.com/janesmith",

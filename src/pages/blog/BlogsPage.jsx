@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { BlogCard, DetailsHeroSection, Heading } from "@/components";
 import { blogsData, newsData } from "@/data";
+import { Link } from "react-router-dom";
 
 export default function BlogsPage() {
   return (
@@ -56,11 +57,8 @@ export default function BlogsPage() {
             Join us on our journey to explore innovative solutions and
             technology.
           </p>
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary-dark text-white"
-          >
-            Contact Us Today
+          <Button size="lg" variant="outline" asChild>
+            <Link to="/contact-us">Contact Us Today</Link>
           </Button>
         </div>
       </section>

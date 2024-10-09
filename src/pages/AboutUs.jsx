@@ -1,6 +1,13 @@
-import { AboutSection, DetailsHeroSection, Heading, TeamSection, Testimonial } from "@/components";
+import {
+  AboutSection,
+  DetailsHeroSection,
+  Heading,
+  TeamSection,
+  Testimonial,
+} from "@/components";
 import { Button } from "@/components/ui/button";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   return (
@@ -99,7 +106,9 @@ export default function AboutUs() {
             Let’s bring your ideas to life with our expert software development
             services.
           </p>
-          <Button size="lg">Contact Us Today</Button>
+          <Button size="lg" variant="outline" asChild>
+            <Link to="/contact-us">Contact Us Today</Link>
+          </Button>
         </div>
       </section>
     </div>

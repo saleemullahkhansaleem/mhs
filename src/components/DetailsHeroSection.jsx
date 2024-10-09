@@ -7,7 +7,7 @@ export default function DetailsHeroSection({ title = "", description = "" }) {
       style={{ backgroundImage: `url('/images/banner.webp')` }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background/90"></div>
-      <div className="relative text-center z-10 text-foreground">
+      <div className="relative text-center z-10 text-foreground max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
           <Heading>{title}</Heading>
         </h1>

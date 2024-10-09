@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { DetailsHeroSection, Heading } from "@/components";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Careers() {
   return (
@@ -114,7 +115,9 @@ export default function Careers() {
             passionate about tech and innovation, drop us a line, and we'll
             notify you of future opportunities.
           </p>
-          <Button size="lg">Contact Us</Button>
+          <Button size="lg" variant="outline" asChild>
+            <Link to="/contact-us">Contact Us</Link>
+          </Button>
         </div>
       </section>
     </div>

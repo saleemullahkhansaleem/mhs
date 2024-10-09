@@ -1,9 +1,11 @@
 import Home from "./Home";
-import ServicesPage from "./ServicesPage";
+import ServicesPage from "./services/ServicesPage";
 import PortfolioPage from "./PortfolioPage";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
-import BlogsPage from "./BlogsPage";
+import BlogsPage from "./blog/BlogsPage";
+import BlogDetailPage from "./blog/BlogDetailPage";
+import NewsDetailPage from "./blog/NewsDetail";
 import Careers from "./Careers";
 import NotFound from "./NotFound";
 import TermsOfServices from "./TermsOfServices";
@@ -11,7 +13,13 @@ import PrivacyPolicy from "./PrivacyPolicy";
 
 // Services Pages
 
+import ServicesLayout from "./services/ServicesLayout";
 import WebDevelopment from "./services/WebDevelopment";
+import MobileAppDevelopment from "./services/MobileAppDevelopment";
+import PortalManagementSystems from "./services/PortalManagementSystems";
+import SoftwareConsultancy from "./services/SoftwareConsultancy";
+import EcommerceSolutions from "./services/EcommerceSolutions";
+import CustomSolutions from "./services/CustomSolutions";
 
 export {
   Home,
@@ -20,11 +28,19 @@ export {
   AboutUs,
   ContactUs,
   BlogsPage,
+  BlogDetailPage,
+  NewsDetailPage,
   Careers,
   NotFound,
   TermsOfServices,
   PrivacyPolicy,
 
   // Services Pages
+  ServicesLayout,
   WebDevelopment,
+  MobileAppDevelopment,
+  PortalManagementSystems,
+  SoftwareConsultancy,
+  EcommerceSolutions,
+  CustomSolutions,
 };

@@ -6,14 +6,22 @@ import Layout from "./Layout.jsx";
 import "@fontsource/poppins";
 import {
   AboutUs,
+  BlogDetailPage,
   BlogsPage,
   Careers,
   ContactUs,
+  CustomSolutions,
+  EcommerceSolutions,
   Home,
+  MobileAppDevelopment,
+  NewsDetailPage,
   NotFound,
+  PortalManagementSystems,
   PortfolioPage,
   PrivacyPolicy,
+  ServicesLayout,
   ServicesPage,
+  SoftwareConsultancy,
   TermsOfServices,
   WebDevelopment,
 } from "./pages";
@@ -29,11 +37,35 @@ const router = createBrowserRouter([
       },
       {
         path: "services/",
-        element: <ServicesPage />,
+        element: <ServicesLayout />,
         children: [
           {
-            path: "web-dev",
+            path: "",
+            element: <ServicesPage />,
+          },
+          {
+            path: "web-development",
             element: <WebDevelopment />,
+          },
+          {
+            path: "mobile-app-development",
+            element: <MobileAppDevelopment />,
+          },
+          {
+            path: "portal-management-systems",
+            element: <PortalManagementSystems />,
+          },
+          {
+            path: "software-consultancy",
+            element: <SoftwareConsultancy />,
+          },
+          {
+            path: "e-commerce-solutions",
+            element: <EcommerceSolutions />,
+          },
+          {
+            path: "custom-solutions",
+            element: <CustomSolutions />,
           },
         ],
       },
@@ -52,6 +84,14 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <BlogsPage />,
+      },
+      {
+        path: "blogs/:slug",
+        element: <BlogDetailPage />,
+      },
+      {
+        path: "news/:slug",
+        element: <NewsDetailPage />,
       },
       {
         path: "careers",

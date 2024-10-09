@@ -1,9 +1,9 @@
 import { DetailsHeroSection, Heading, ServiceCard } from "@/components";
-import { webDevelopmentData } from "@/data";
+import { portalManagementSystemsData } from "@/data";
 
-export default function WebDevelopmentPage() {
+export default function PortalManagementSystems() {
   const { title, description, features, process, technologies } =
-    webDevelopmentData;
+    portalManagementSystemsData;
 
   return (
     <>
@@ -30,13 +30,13 @@ export default function WebDevelopmentPage() {
         </div>
 
         <h2 className="text-4xl font-bold mb-8 mt-12 text-center">
-          Our <Heading> Web Development </Heading> Process
+          Our <Heading> Portal Management </Heading> Process
         </h2>
 
         {/* Process Section */}
         <p className="text-muted-foreground max-w-3xl mx-auto text-center mb-8">
-          We follow a structured approach to ensure we meet your business goals
-          and deliver a website that aligns with your vision. Our process
+          We follow a structured approach to build powerful, user-friendly
+          portals that streamline your business operations. Our process
           includes:
         </p>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -51,8 +51,8 @@ export default function WebDevelopmentPage() {
 
         {/* Technologies Section */}
         <p className="text-muted-foreground max-w-3xl mx-auto text-center mb-8">
-          We work with a wide range of modern tools and technologies to deliver
-          the best results. These include:
+          We utilize cutting-edge tools and technologies to ensure that your
+          portal is fast, secure, and scalable. Some of these include:
         </p>
 
         <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
