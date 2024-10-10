@@ -7,7 +7,7 @@ export default function Careers() {
   return (
     <div className="bg-background text-foreground">
       <DetailsHeroSection
-        title="Careers at MHS Tech Venture"
+        title="Careers at MHS Tech Ventures"
         description="Join our team and help us shape the future of technology."
       />
 
@@ -17,7 +17,7 @@ export default function Careers() {
           Why <Heading>Work</Heading> With Us?
         </h2>
         <p className="mb-12 text-muted-foreground max-w-3xl mx-auto">
-          At MHS Tech Venture, we foster innovation, creativity, and
+          At MHS Tech Ventures, we foster innovation, creativity, and
           collaboration. We are committed to building a diverse, inclusive
           workplace where you can thrive and make a difference.
         </p>

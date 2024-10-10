@@ -1,8 +1,8 @@
-# MHS Tech Venture Pvt Ltd
+# MHS Tech Ventures Pvt Ltd
 
 ## Overview
 
-MHS Tech Venture is a software house company based in Islamabad, Pakistan. We specialize in providing global solutions for software consultancy, web development, mobile app development, and portal management systems. Our mission is to help businesses worldwide achieve success through innovative and scalable software solutions.
+MHS Tech Ventures is a software house company based in Islamabad, Pakistan. We specialize in providing global solutions for software consultancy, web development, mobile app development, and portal management systems. Our mission is to help businesses worldwide achieve success through innovative and scalable software solutions.
 
 ## Services
 
@@ -45,15 +45,15 @@ We use a wide range of cutting-edge technologies to deliver the best solutions:
 
 If you are interested in collaborating or have any inquiries, feel free to reach out to us:
 
-- **Website**: [https://www.mhstechventure.com](https://www.mhstechventure.com)
-- **Email**: contact@mhstechventure.com
+- **Website**: [https://www.mhstechventures.com](https://www.mhstechventures.com)
+- **Email**: contact@mhstechventures.com
 - **Phone**: +92-51-9876543
 
 ## Social Media
 
-- [Facebook](https://www.facebook.com/mhstechventure)
-- [Twitter](https://www.twitter.com/mhstechventure)
-- [LinkedIn](https://www.linkedin.com/company/mhstechventure)
+- [Facebook](https://www.facebook.com/mhstechventures)
+- [Twitter](https://www.twitter.com/mhstechventures)
+- [LinkedIn](https://www.linkedin.com/company/mhstechventures)
 
 ## License
 

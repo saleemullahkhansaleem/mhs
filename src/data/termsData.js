@@ -17,16 +17,16 @@ export const termsData = [
   {
     title: "4. Intellectual Property",
     content:
-      "All content on our website, including text, graphics, logos, and software, is the property of MHS Tech Venture. You are not allowed to reproduce, distribute, or use any content without our written consent.",
+      "All content on our website, including text, graphics, logos, and software, is the property of MHS Tech Ventures. You are not allowed to reproduce, distribute, or use any content without our written consent.",
   },
   {
     title: "5. Limitation of Liability",
     content:
-      "MHS Tech Venture shall not be liable for any damages resulting from the use or inability to use our services. This includes, but is not limited to, incidental, consequential, or punitive damages.",
+      "MHS Tech Ventures shall not be liable for any damages resulting from the use or inability to use our services. This includes, but is not limited to, incidental, consequential, or punitive damages.",
   },
   {
     title: "6. Termination of Service",
     content:
-      "We reserve the right to suspend or terminate your access to our services at any time, without notice, for conduct that we believe violates these terms or is harmful to MHS Tech Venture or other users.",
+      "We reserve the right to suspend or terminate your access to our services at any time, without notice, for conduct that we believe violates these terms or is harmful to MHS Tech Ventures or other users.",
   },
 ];

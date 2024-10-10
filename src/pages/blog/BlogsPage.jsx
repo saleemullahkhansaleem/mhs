@@ -9,7 +9,7 @@ export default function BlogsPage() {
     <div className="bg-background text-foreground">
       <DetailsHeroSection
         title="Our Blogs"
-        description="Insights, tips, and updates from MHS Tech Venture."
+        description="Insights, tips, and updates from MHS Tech Ventures."
       />
 
       {/* <BlogSection /> */}
@@ -37,7 +37,7 @@ export default function BlogsPage() {
         </h2>
         <p className="mb-12 text-muted-foreground max-w-3xl mx-auto text-center">
           Catch up on the latest updates, partnerships, and product launches
-          from MHS Tech Venture. Our news section keeps you in the loop with
+          from MHS Tech Ventures. Our news section keeps you in the loop with
           important developments and milestones as we continue to expand and
           innovate globally.
         </p>

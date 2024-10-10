@@ -38,7 +38,7 @@ export default function AboutSection() {
               Global Reach, <Heading>Local Expertise</Heading>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Based in Islamabad, Pakistan, MHS Tech Venture brings world-class
+              Based in Islamabad, Pakistan, MHS Tech Ventures brings world-class
               software solutions to businesses across the globe. Our team
               combines local insights with international best practices to
               deliver unparalleled results.

@@ -22,7 +22,7 @@ export default function AboutUs() {
         <div className="bg-primary/10 p-8 border border-primary/20 rounded hover:bg-primary/20">
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
           <p className="text-muted-foreground">
-            At MHS Tech Venture, our mission is to provide innovative software
+            At MHS Tech Ventures, our mission is to provide innovative software
             solutions that help businesses excel in the digital world.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function AboutUs() {
           <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-4xl font-bold">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
-              MHS Tech Venture began with a vision to provide cutting-edge
+              MHS Tech Ventures began with a vision to provide cutting-edge
               software solutions to businesses across the globe. With years of
               industry expertise, we’ve become a trusted partner for companies
               looking to innovate and succeed.

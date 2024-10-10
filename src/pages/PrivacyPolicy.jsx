@@ -9,13 +9,13 @@ export default function PrivacyPolicy() {
     <>
       <DetailsHeroSection
         title="Privacy Policy"
-        description="How we protect your privacy and data at MHS Tech Venture"
+        description="How we protect your privacy and data at MHS Tech Ventures"
       />
 
       <SectionContainer
         title="Our Commitment to"
         titleColor="Your Privacy"
-        description="At MHS Tech Venture, we are committed to protecting your personal data and ensuring your privacy. This Privacy Policy explains how we collect, use, and safeguard your information."
+        description="At MHS Tech Ventures, we are committed to protecting your personal data and ensuring your privacy. This Privacy Policy explains how we collect, use, and safeguard your information."
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >
         {privacyPolicyData.map((section, index) => (

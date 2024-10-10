@@ -23,7 +23,7 @@ export default function ServicesPage() {
           What We <Heading>Offer</Heading>
         </h2>
         <p className="mb-12 text-muted-foreground max-w-3xl mx-auto text-center">
-          At MHS Tech Venture, we deliver innovative software solutions to help
+          At MHS Tech Ventures, we deliver innovative software solutions to help
           businesses thrive. From web and mobile development to custom portals
           and consultancy, our expert team ensures your digital transformation
           is seamless and scalable.

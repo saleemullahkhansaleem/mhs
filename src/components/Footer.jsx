@@ -8,8 +8,8 @@ import { MoveRight } from "lucide-react";
 const contactInfo = [
   {
     icon: FaEnvelope,
-    text: "info@mhstechventure.com",
-    path: "mailto:info@mhstechventure.com",
+    text: "info@mhstechventures.com",
+    path: "mailto:info@mhstechventures.com",
   },
   { icon: FaPhone, text: "+123 456 7890", path: "tel:+1234567890" },
   { icon: FaMapMarkerAlt, text: "123 Tech Avenue, Islamabad, Pakistan" },
@@ -31,7 +31,7 @@ export default function Footer() {
             <LogoMHS footer />
           </div>
           <p className="p-4">
-            MHS Tech Venture provides cutting-edge technology solutions to
+            MHS Tech Ventures provides cutting-edge technology solutions to
             businesses worldwide. From software development to consultancy, we
             help you achieve your digital transformation goals.
           </p>
@@ -134,7 +134,9 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4">
-        <p className="text-sm">© 2024 MHS Tech Venture. All rights reserved.</p>
+        <p className="text-sm">
+          © 2024 MHS Tech Ventures. All rights reserved.
+        </p>
         <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
           {[
             { name: "Terms of Service", link: "/terms-of-services" },

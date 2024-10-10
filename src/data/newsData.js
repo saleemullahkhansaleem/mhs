@@ -1,8 +1,8 @@
 export const newsData = [
   {
-    title: "MHS Tech Venture Partners with Leading E-commerce Platform",
+    title: "MHS Tech Ventures Partners with Leading E-commerce Platform",
     excerpt:
-      "MHS Tech Venture announces a strategic partnership with one of the top e-commerce platforms to deliver custom-tailored solutions for businesses worldwide.",
+      "MHS Tech Ventures announces a strategic partnership with one of the top e-commerce platforms to deliver custom-tailored solutions for businesses worldwide.",
     image: "/images/news/1.webp",
     url: "/news/mhs-ecommerce-partnership",
     date: "October 5, 2024",
@@ -14,14 +14,14 @@ export const newsData = [
       {
         heading: "Partnership Details",
         detail: [
-          "MHS Tech Venture will collaborate with the e-commerce platform to create customized solutions that address the unique challenges faced by businesses in the digital landscape.",
+          "MHS Tech Ventures will collaborate with the e-commerce platform to create customized solutions that address the unique challenges faced by businesses in the digital landscape.",
           "The partnership is expected to provide significant benefits, including improved operational efficiency and enhanced customer experiences.",
         ],
       },
       {
         heading: "Expected Impact",
         detail: [
-          "With this partnership, MHS Tech Venture aims to set a new standard in the e-commerce sector, empowering businesses to achieve their goals through innovative technology.",
+          "With this partnership, MHS Tech Ventures aims to set a new standard in the e-commerce sector, empowering businesses to achieve their goals through innovative technology.",
           "This initiative is part of MHS's commitment to driving digital transformation for its clients.",
         ],
       },
@@ -50,7 +50,7 @@ export const newsData = [
         heading: "Client Benefits",
         detail: [
           "Organizations using the new portal management system can expect increased productivity and improved decision-making based on actionable insights provided by AI.",
-          "The launch reinforces MHS Tech Venture's commitment to delivering cutting-edge technology solutions to its clients.",
+          "The launch reinforces MHS Tech Ventures's commitment to delivering cutting-edge technology solutions to its clients.",
         ],
       },
     ],
@@ -58,26 +58,26 @@ export const newsData = [
   {
     title: "MHS Opens New Office in Dubai to Expand Global Reach",
     excerpt:
-      "MHS Tech Venture is excited to announce the opening of a new office in Dubai, marking a significant step towards expanding our global presence.",
+      "MHS Tech Ventures is excited to announce the opening of a new office in Dubai, marking a significant step towards expanding our global presence.",
     image: "/images/news/3.webp",
     url: "/news/mhs-dubai-office",
     date: "September 20, 2024",
     category: "Expansion",
     author: "Fatima Zaman",
     description:
-      "This new office in Dubai is part of MHS Tech Venture's strategy to enhance its service delivery and accessibility to clients in the Middle East and beyond.",
+      "This new office in Dubai is part of MHS Tech Ventures's strategy to enhance its service delivery and accessibility to clients in the Middle East and beyond.",
     content: [
       {
         heading: "Strategic Location",
         detail: [
-          "The Dubai office will serve as a hub for MHS Tech Venture’s operations in the region, facilitating closer collaboration with clients and partners.",
+          "The Dubai office will serve as a hub for MHS Tech Ventures’s operations in the region, facilitating closer collaboration with clients and partners.",
           "This strategic location will allow MHS to tap into the growing demand for technology solutions in the Middle East.",
         ],
       },
       {
         heading: "Future Plans",
         detail: [
-          "The opening of the Dubai office is just the beginning, as MHS Tech Venture plans to expand its presence in key global markets to better serve its clients.",
+          "The opening of the Dubai office is just the beginning, as MHS Tech Ventures plans to expand its presence in key global markets to better serve its clients.",
           "This move is aimed at driving growth and innovation while maintaining high-quality service standards.",
         ],
       },

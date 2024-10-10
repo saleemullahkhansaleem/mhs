@@ -7,7 +7,7 @@ export default function ServicesSection() {
       id="services-section"
       title=""
       titleColor="Our Services"
-      description="At MHS Tech Venture, we deliver innovative software solutions to
+      description="At MHS Tech Ventures, we deliver innovative software solutions to
               help businesses thrive. From web and mobile development to custom
               portals and consultancy, our expert team ensures your digital
               transformation is seamless and scalable."

@@ -10,7 +10,7 @@ export default function BlogSection() {
       description="Stay updated with the latest insights, trends, and innovations in
               the tech industry. Our blogs cover everything from software
               development to digital transformation, reflecting MHS Tech
-              Venture's commitment to excellence in delivering cutting-edge
+              Ventures's commitment to excellence in delivering cutting-edge
               solutions."
       btnTxt="See all Posts"
       btnUrl="/blogs"

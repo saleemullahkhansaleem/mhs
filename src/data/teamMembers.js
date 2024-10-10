@@ -9,7 +9,7 @@ export const teamMembers = [
   },
   {
     name: "Ehtesham Ahmed",
-    position: "Lead Software Engineer",
+    position: "Lead Project Manager",
     image: "/images/team/ehtesham-profile.png",
     linkedin: "https://linkedin.com/in/janesmith",
     twitter: "https://twitter.com/janesmith",
@@ -17,7 +17,7 @@ export const teamMembers = [
   },
   {
     name: "Mubashar Iftekhar",
-    position: "Project Manager",
+    position: "Backend Developer",
     image: "/images/team/mubashar-profile.png",
     linkedin: "https://linkedin.com/in/mikejohnson",
     twitter: "https://twitter.com/mikejohnson",
@@ -25,10 +25,10 @@ export const teamMembers = [
   },
   {
     name: "Saleemullah Khan",
-    position: "Project Manager",
+    position: "Frontend React Developer",
     image: "/images/team/saleem-profile.png",
-    linkedin: "https://linkedin.com/in/mikejohnson",
-    twitter: "https://twitter.com/mikejohnson",
-    github: "https://github.com/mikejohnson",
+    linkedin: "https://linkedin.com/in/mrsaleem",
+    twitter: "https://twitter.com/khsn_sali",
+    github: "https://github.com/saleemullahkhansaleem",
   },
 ];

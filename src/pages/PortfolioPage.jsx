@@ -30,7 +30,7 @@ export default function PortfolioPage() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
-            <ProjectCard project={project} index={index} />
+            <ProjectCard project={project} index={index} key={index} />
           ))}
         </div>
       </section>

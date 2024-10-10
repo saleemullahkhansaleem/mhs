@@ -9,12 +9,12 @@ export default function TermsOfService() {
     <>
       <DetailsHeroSection
         title="Terms of Service"
-        description="Your rights and responsibilities at MHS Tech Venture"
+        description="Your rights and responsibilities at MHS Tech Ventures"
       />
 
       <SectionContainer
         title="Welcome to"
-        titleColor="MHS Tech Venture"
+        titleColor="MHS Tech Ventures"
         description="By accessing and using our services, you agree to abide by our terms and conditions. Please read them carefully to understand your rights and responsibilities."
         className="grid grid-cols-1 md:grid-cols-2 gap-8"
       >

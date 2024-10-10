@@ -100,7 +100,7 @@ export function LogoMHS({ footer = false }) {
     <Link className="flex items-center" to="/">
       <img
         src="/images/logos/logo.png"
-        alt="MHS Tech Venture Logo"
+        alt="MHS Tech Ventures Logo"
         className="h-10"
       />
       <div className="hidden md:block">
@@ -109,12 +109,12 @@ export function LogoMHS({ footer = false }) {
             footer ? "from-white" : "from-accent-foreground"
           } to-primary uppercase`}
         >
-          MHS Tech Venture
+          MHS Tech Ventures
         </h1>
         <p
           className={`ml-2 text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r ${
             footer ? "from-white" : "from-accent-foreground"
-          } to-primary uppercase text-justify tracking-[7px]`}
+          } to-primary uppercase text-justify tracking-[7.7px]`}
         >
           Private Limited
         </p>
