@@ -1,44 +1,26 @@
 export const projectsData = [
   {
-    title: "E-commerce Revolution",
+    title: "Steadfast Security",
     description:
-      "An innovative e-commerce platform designed for seamless online shopping experiences, featuring advanced search filters and secure payment gateways.",
+      "A comprehensive security services platform providing users with a secure environment to explore services, request quotes, and make bookings, built with seamless navigation and user-friendly design.",
     image: "/images/projects/1.webp",
-    url: "#",
+    liveUrl: "https://steadfastsecurity.com.pk/",
+    codeUrl: "",
   },
   {
-    title: "TaskMaster Pro",
+    title: "Deed NGO Platform",
     description:
-      "A robust mobile application tailored for task and project management, integrating calendar synchronization and real-time collaboration features.",
+      "A dynamic web platform developed for Drive for Economic and Environmental Development (DEED), focusing on showcasing projects, initiatives, and partnerships while engaging donors and stakeholders.",
     image: "/images/projects/2.webp",
-    url: "#",
+    liveUrl: "https://mrdeed.vercel.app/",
+    codeUrl: "",
   },
   {
-    title: "DataInsight Analytics",
+    title: "Global Links Technologies",
     description:
-      "A cutting-edge web solution that provides real-time data analytics and visualization tools, empowering businesses to make data-driven decisions.",
+      "A modern IT services website for an innovative startup, offering information on cutting-edge software solutions, including web and mobile app development, software consultancy, and portal management systems.",
     image: "/images/projects/3.webp",
-    url: "#",
-  },
-  {
-    title: "Business Dashboard Suite",
-    description:
-      "A user-friendly dashboard application offering comprehensive insights into business performance metrics, streamlining decision-making processes.",
-    image: "/images/projects/4.webp",
-    url: "#",
-  },
-  {
-    title: "Healthcare Connect",
-    description:
-      "A telemedicine platform that connects patients with healthcare professionals through secure video consultations and medical record management.",
-    image: "/images/projects/5.webp",
-    url: "#",
-  },
-  {
-    title: "Smart Inventory System",
-    description:
-      "An intelligent inventory management solution that optimizes stock levels and enhances order fulfillment processes using real-time data.",
-    image: "/images/projects/6.webp",
-    url: "#",
+    liveUrl: "https://gltech.vercel.app/",
+    codeUrl: "",
   },
 ];

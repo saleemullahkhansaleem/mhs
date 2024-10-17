@@ -8,7 +8,7 @@ export default function ProjectCard({
     title: "",
     description: "",
     image: "/images/placeholder.webp",
-    url: "#",
+    liveUrl: "#",
   },
   index = 0,
 }) {
@@ -30,7 +30,8 @@ export default function ProjectCard({
       <div className="absolute top-0 w-full h-0 overflow-hidden group-hover:h-16 transition-all duration-300 flex bg-accent/80 z-10">
         <h3 className="text-xl font-bold p-4 flex-1">{project.title}</h3>
         <Link
-          to={project.url}
+          target="_blank"
+          to={project.liveUrl}
           className="w-16 h-16 flex items-center justify-center bg-primary transition-colors"
         >
           <MoveRight />
