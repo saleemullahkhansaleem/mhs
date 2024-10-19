@@ -11,7 +11,7 @@ export default function PortfolioSection() {
               and commitment to delivering top-notch software solutions tailored
               to our clients' needs."
       btnTxt="See all Projects"
-      btnUrl="/prtfolio"
+      btnUrl="/portfolio"
       className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
       {projectsData.map((project, index) => (
