@@ -1,6 +1,6 @@
 export const projectsData = [
   {
-    title: "Steadfast Security",
+    title: "Stead Fast Security",
     description:
       "A comprehensive security services platform providing users with a secure environment to explore services, request quotes, and make bookings, built with seamless navigation and user-friendly design.",
     image: "/images/projects/1.webp",

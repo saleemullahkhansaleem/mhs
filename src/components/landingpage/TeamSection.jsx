@@ -13,7 +13,7 @@ export default function TeamSection() {
       titleColor="Our Team"
       description="Our talented team is committed to delivering innovative solutions
             and ensuring your project's success."
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
     >
       {teamMembers.map((member, index) => (
         <TeamBox member={member} index={index} key={index} />

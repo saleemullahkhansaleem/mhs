@@ -1,12 +1,12 @@
 export const teamMembers = [
-  {
-    name: "Muhammad Hanif Shah",
-    position: "Chief Executive Officer",
-    image: "/images/team/mhs-profile.png",
-    linkedin: "https://linkedin.com/in/johndoe",
-    twitter: "https://twitter.com/johndoe",
-    github: "https://github.com/johndoe",
-  },
+  // {
+  //   name: "Muhammad Hanif Shah",
+  //   position: "Chief Executive Officer",
+  //   image: "/images/team/mhs-profile.png",
+  //   linkedin: "https://linkedin.com/in/johndoe",
+  //   twitter: "https://twitter.com/johndoe",
+  //   github: "https://github.com/johndoe",
+  // },
   {
     name: "Ehtesham Ahmed",
     position: "Lead Project Manager",
@@ -18,7 +18,7 @@ export const teamMembers = [
   {
     name: "Mubashar Iftekhar",
     position: "Backend Developer",
-    image: "/images/team/mubashar-profile.png",
+    image: "/images/team/mubashir-profile.png",
     linkedin: "https://linkedin.com/in/mikejohnson",
     twitter: "https://twitter.com/mikejohnson",
     github: "https://github.com/mikejohnson",

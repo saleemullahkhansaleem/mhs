@@ -29,7 +29,11 @@ export const menu = {
   ],
   social: [
     { name: "Facebook", path: "https://facebook.com", icon: FaFacebookF },
-    { name: "LinkedIn", path: "https://linkedin.com", icon: FaLinkedinIn },
+    {
+      name: "LinkedIn",
+      path: "https://www.linkedin.com/company/mhs-tech-ventures/",
+      icon: FaLinkedinIn,
+    },
     { name: "YouTube", path: "https://youtube.com", icon: FaYoutube },
     { name: "Instagram", path: "https://instagram.com", icon: FaInstagram },
   ],
