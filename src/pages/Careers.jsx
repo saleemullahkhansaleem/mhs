@@ -4,24 +4,17 @@ import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const jobOpenings = [
-  // {
-  //   title: "Senior React Developer",
-  //   location: "Islamabad, Pakistan",
-  //   requirements: [
-  //     "5+ years of experience in front-end development",
-  //     "Expert in React.js, JavaScript, TypeScript",
-  //     "Experience with RESTful APIs and GraphQL",
-  //   ],
-  // },
-  // {
-  //   title: "UI/UX Designer",
-  //   location: "Remote",
-  //   requirements: [
-  //     "3+ years of experience in UI/UX design",
-  //     "Proficient in Figma, Sketch, and Adobe XD",
-  //     "Ability to translate concepts into user flows and wireframes",
-  //   ],
-  // },
+  {
+    id: 3,
+    title: "Accountant",
+    location: "Islamabad, Pakistan",
+    requirements: [
+      "Bachelor's degree in Accounting, Finance, or related field",
+      "2+ years of experience in accounting or finance",
+      "Proficiency in accounting software and MS Excel",
+    ],
+    label: "Accounting",
+  },
 ];
 
 export default function Careers() {
