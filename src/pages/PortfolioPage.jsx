@@ -35,7 +35,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <Testimonial />
+      {/* <Testimonial /> */}
       <TeamSection />
 
       {/* Call to Action Section */}

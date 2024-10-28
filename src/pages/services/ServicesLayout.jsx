@@ -9,7 +9,7 @@ export default function ServicesLayout() {
 
       <PortfolioSection />
 
-      <Testimonial />
+      {/* <Testimonial /> */}
 
       {/* Call to Action Section */}
       <section className="py-12">

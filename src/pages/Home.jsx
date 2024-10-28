@@ -21,7 +21,7 @@ export default function Home() {
       <WhyChooseUs />
       <PortfolioSection />
       <TeamSection/>
-      <Testimonial />
+      {/* <Testimonial /> */}
       <BlogSection />
     </main>
   );

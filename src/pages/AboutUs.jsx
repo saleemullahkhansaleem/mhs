@@ -94,7 +94,7 @@ export default function AboutUs() {
       </section>
 
       <TeamSection />
-      <Testimonial />
+      {/* <Testimonial /> */}
 
       {/* Call to Action */}
       <section className="py-12">
