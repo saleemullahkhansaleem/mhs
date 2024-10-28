@@ -3,6 +3,27 @@ import { DetailsHeroSection, Heading } from "@/components";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+const jobOpenings = [
+  // {
+  //   title: "Senior React Developer",
+  //   location: "Islamabad, Pakistan",
+  //   requirements: [
+  //     "5+ years of experience in front-end development",
+  //     "Expert in React.js, JavaScript, TypeScript",
+  //     "Experience with RESTful APIs and GraphQL",
+  //   ],
+  // },
+  // {
+  //   title: "UI/UX Designer",
+  //   location: "Remote",
+  //   requirements: [
+  //     "3+ years of experience in UI/UX design",
+  //     "Proficient in Figma, Sketch, and Adobe XD",
+  //     "Ability to translate concepts into user flows and wireframes",
+  //   ],
+  // },
+];
+
 export default function Careers() {
   return (
     <div className="bg-background text-foreground">
@@ -55,51 +76,30 @@ export default function Careers() {
             Current <Heading>Job</Heading> Openings
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Job Opening 1 */}
-            <div className="p-8 border border-primary/20 rounded bg-primary/10 hover:bg-primary/20 transition">
-              <h3 className="text-2xl font-bold mb-2">
-                Senior React Developer
-              </h3>
-              <p className="text-muted-foreground mb-4">Islamabad, Pakistan</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>5+ years of experience in front-end development</span>
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>Expert in React.js, JavaScript, TypeScript</span>
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>Experience with RESTful APIs and GraphQL</span>
-                </li>
-              </ul>
-              <Button className="w-full">Apply Now</Button>
-            </div>
-
-            {/* Job Opening 2 */}
-            <div className="p-8 border border-primary/20 rounded bg-primary/10 hover:bg-primary/20 transition">
-              <h3 className="text-2xl font-bold mb-2">UI/UX Designer</h3>
-              <p className="text-muted-foreground mb-4">Remote</p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>3+ years of experience in UI/UX design</span>
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>Proficient in Figma, Sketch, and Adobe XD</span>
-                </li>
-                <li className="flex items-center">
-                  <FaCheckCircle className="text-primary mr-2" />
-                  <span>
-                    Ability to translate concepts into user flows and wireframes
-                  </span>
-                </li>
-              </ul>
-              <Button className="w-full">Apply Now</Button>
-            </div>
+            {jobOpenings.length < 1 ? (
+              <h1 className="p-8 text-3xl lg:col-span-2">
+                No Openings available right now
+              </h1>
+            ) : (
+              jobOpenings.map((job, index) => (
+                <div
+                  key={index}
+                  className="p-8 border border-primary/20 rounded bg-primary/10 hover:bg-primary/20 transition"
+                >
+                  <h3 className="text-2xl font-bold mb-2">{job.title}</h3>
+                  <p className="text-muted-foreground mb-4">{job.location}</p>
+                  <ul className="space-y-2 mb-6">
+                    {job.requirements.map((requirement, reqIndex) => (
+                      <li key={reqIndex} className="flex items-center">
+                        <FaCheckCircle className="text-primary mr-2" />
+                        <span>{requirement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full">Apply Now</Button>
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
