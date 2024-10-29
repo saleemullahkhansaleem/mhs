@@ -98,11 +98,26 @@ export default function Header({ setDarkMode, darkMode }) {
 export function LogoMHS({ footer = false }) {
   return (
     <Link className="flex items-center" to="/">
-      <img
-        src="/images/logos/logo.png"
-        alt="MHS Tech Ventures Logo"
-        className="h-10"
-      />
+      {footer ? (
+        <img
+          src="/images/logos/logo-dark.png"
+          alt="MHS Tech Ventures Logo"
+          className="h-10"
+        />
+      ) : (
+        <>
+          <img
+            src="/images/logos/logo.png"
+            alt="MHS Tech Ventures Logo"
+            className="h-10 block dark:hidden"
+          />
+          <img
+            src="/images/logos/logo-dark.png"
+            alt="MHS Tech Ventures Logo"
+            className="h-10 hidden dark:block"
+          />
+        </>
+      )}
       <div className="hidden md:block">
         <h1
           className={`ml-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${
