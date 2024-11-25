@@ -12,6 +12,7 @@ import BlogCard from "./BlogCard";
 
 import SectionContainer from "./landingpage/SectionContainer";
 import HeroSection from "./landingpage/HeroSection";
+import Certified from "./Certified";
 import ServicesSection from "./landingpage/ServicesSection";
 import AboutSection from "./landingpage/AboutSection";
 import WhyChooseUs from "./landingpage/WhyChooseUssection";
@@ -34,6 +35,7 @@ export {
   //Home page components
   SectionContainer,
   HeroSection,
+  Certified,
   ServicesSection,
   AboutSection,
   WhyChooseUs,

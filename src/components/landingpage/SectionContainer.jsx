@@ -12,13 +12,14 @@ export default function SectionContainer({
   btnUrl = "",
   bgImage,
   className = "",
+  bg = "bg-background",
   ...props
 }) {
   return (
     <section
       {...props}
       id={id}
-      className="w-full py-8 md:py-12 px-4 md:px-6 bg-background transition-colors duration-300 relative"
+      className={`w-full py-8 md:py-12 px-4 md:px-6 ${bg} transition-colors duration-300 relative`}
     >
       {bgImage && (
         <img

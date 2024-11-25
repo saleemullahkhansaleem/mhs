@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   AboutSection,
   BlogSection,
+  Certified,
   HeroSection,
   PortfolioSection,
   ServicesSection,
@@ -16,11 +17,12 @@ export default function Home() {
   return (
     <main className="flex-1 pt-16">
       <HeroSection />
+      <Certified />
       <ServicesSection />
       <AboutSection />
       <WhyChooseUs />
       <PortfolioSection />
-      <TeamSection/>
+      <TeamSection />
       {/* <Testimonial /> */}
       <BlogSection />
     </main>
