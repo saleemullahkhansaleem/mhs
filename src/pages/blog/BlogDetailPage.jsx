@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { blogsData } from "@/data"; // Make sure the path is correct
 import { DetailsHeroSection } from "@/components";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogDetailPage() {
   const { slug } = useParams(); // Get the dynamic part from URL
@@ -19,6 +20,10 @@ export default function BlogDetailPage() {
 
   return (
     <>
+      <Helmet>
+        <title>{blog.title} - MHS Tech Ventures</title>
+        <meta name="description" content={blog.description} />
+      </Helmet>
       <DetailsHeroSection title={blog.title} description={blog.excerpt} />
       <div className="container max-w-4xl mx-auto px-4 py-12">
         <div className="flex items-center mb-8 text-muted-foreground">

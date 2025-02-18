@@ -1,12 +1,4 @@
 export const teamMembers = [
-  // {
-  //   name: "Muhammad Hanif Shah",
-  //   position: "Chief Executive Officer",
-  //   image: "/images/team/mhs-profile.png",
-  //   linkedin: "https://linkedin.com/in/johndoe",
-  //   twitter: "https://twitter.com/johndoe",
-  //   github: "https://github.com/johndoe",
-  // },
   {
     name: "Ehtesham Ahmed",
     position: "Lead Project Manager",

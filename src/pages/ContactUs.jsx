@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DetailsHeroSection, Heading } from "@/components";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,13 @@ export default function ContactUs() {
 
   return (
     <div className="bg-background text-foreground">
+      <Helmet>
+        <title>Contact - MHS Tech Ventures</title>
+        <meta
+          name="description"
+          content="MHS Tech Ventures provides cutting-edge technology solutions to businesses worldwide. From software development to consultancy, we help you achieve your digital transformation goals."
+        />
+      </Helmet>
       <DetailsHeroSection
         title="Contact Us"
         description="We're here to help you achieve your business goals."

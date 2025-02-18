@@ -3,10 +3,18 @@ import { Button } from "@/components/ui/button";
 import { BlogCard, DetailsHeroSection, Heading } from "@/components";
 import { blogsData, newsData } from "@/data";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogsPage() {
   return (
     <div className="bg-background text-foreground">
+      <Helmet>
+        <title>Blogs - MHS Tech Ventures</title>
+        <meta
+          name="description"
+          content="MHS Tech Ventures provides cutting-edge technology solutions to businesses worldwide. From software development to consultancy, we help you achieve your digital transformation goals."
+        />
+      </Helmet>
       <DetailsHeroSection
         title="Our Blogs"
         description="Insights, tips, and updates from MHS Tech Ventures."

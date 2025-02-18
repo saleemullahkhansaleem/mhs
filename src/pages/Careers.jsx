@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { DetailsHeroSection, Heading } from "@/components";
 import { FaCheckCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const jobOpenings = [
   {
@@ -20,6 +21,13 @@ const jobOpenings = [
 export default function Careers() {
   return (
     <div className="bg-background text-foreground">
+      <Helmet>
+        <title>Career - MHS Tech Ventures</title>
+        <meta
+          name="description"
+          content="MHS Tech Ventures provides cutting-edge technology solutions to businesses worldwide. From software development to consultancy, we help you achieve your digital transformation goals."
+        />
+      </Helmet>
       <DetailsHeroSection
         title="Careers at MHS Tech Ventures"
         description="Join our team and help us shape the future of technology."

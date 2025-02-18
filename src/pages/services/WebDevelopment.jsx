@@ -1,5 +1,8 @@
 import { DetailsHeroSection, Heading, ServiceCard } from "@/components";
+import { Button } from "@/components/ui/button";
 import { webDevelopmentData } from "@/data";
+import { ArrowLeft, MoveLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function WebDevelopmentPage() {
   const { title, description, features, process, technologies } =
@@ -12,16 +15,11 @@ export default function WebDevelopmentPage() {
 
       {/* Service Section */}
       <section className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold mb-8">
-          Comprehensive <Heading>{title}</Heading> Services
-        </h2>
-        <p className="mb-12 text-muted-foreground max-w-5xl text-xl">
-          {description}
-        </p>
-
-        <h2 className="text-4xl font-bold mb-8 mt-12 text-center">
-          What <Heading> Sets Us Apart? </Heading>
-        </h2>
+        <Button variant="link" size="lg" className="mb-8" asChild>
+          <Link to="/services">
+            <ArrowLeft className="mr-2" /> Back to services
+          </Link>
+        </Button>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

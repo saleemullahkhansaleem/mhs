@@ -7,7 +7,7 @@ export default function ServicesLayout() {
     <>
       <Outlet />
 
-      <PortfolioSection />
+      {/* <PortfolioSection /> */}
 
       {/* <Testimonial /> */}
 
