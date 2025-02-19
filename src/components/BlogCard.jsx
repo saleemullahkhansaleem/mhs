@@ -33,10 +33,10 @@ export default function BlogCard({ post, index }) {
             <div className="flex items-center">
               <FaTags className="mr-2" /> {post.category}
             </div>
-            <span>|</span>
+            {/* <span>|</span>
             <div className="flex items-center">
               <FaUser className="mr-2" /> {post.author}
-            </div>
+            </div> */}
           </div>
 
           <h3 className="text-xl font-semibold mb-2">{post.title}</h3>

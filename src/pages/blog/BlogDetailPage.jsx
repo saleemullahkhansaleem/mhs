@@ -27,7 +27,7 @@ export default function BlogDetailPage() {
       <DetailsHeroSection title={blog.title} description={blog.excerpt} />
       <div className="container max-w-4xl mx-auto px-4 py-12">
         <div className="flex items-center mb-8 text-muted-foreground">
-          <span className="mr-4">By {blog.author}</span>
+          {/* <span className="mr-4">By {blog.author}</span> */}
           <span>{new Date(blog.date).toLocaleDateString()}</span>
         </div>
         <img

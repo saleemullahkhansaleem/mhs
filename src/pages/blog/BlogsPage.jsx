@@ -39,7 +39,7 @@ export default function BlogsPage() {
       </section>
 
       {/* <NewsSection /> */}
-      <section className="container mx-auto px-4 py-12">
+      {/* <section className="container mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold text-center mb-8">
           Latest <Heading> News</Heading>
         </h2>
@@ -54,7 +54,7 @@ export default function BlogsPage() {
             <BlogCard post={post} index={index} key={index} />
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="py-12">
         <div className="container mx-auto text-center">

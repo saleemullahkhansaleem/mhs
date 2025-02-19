@@ -28,7 +28,7 @@ export default function HeroSection() {
               {menu.social.map((link, index) => (
                 <Link
                   key={index}
-                  to={link.url}
+                  to={link.path}
                   title={link.name}
                   className="group/social-link hover:text-primary transition"
                   target="_blank"
