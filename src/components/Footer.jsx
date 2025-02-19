@@ -4,6 +4,7 @@ import { BackToTopButton } from ".";
 import { LogoMHS } from "./Header";
 import { menu, servicesData } from "@/data";
 import { MoveRight } from "lucide-react";
+import MrCard from "./MrCard";
 
 const contactInfo = [
   {
@@ -137,11 +138,18 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center p-4">
-        <p className="text-sm">
-          Developed by{" "}
-          <Link target="_blank" className="text-primary hover:underline" to={"https://gltech.vercel.app/"}>Global Links Technologies</Link> | ©
-          2024 MHS Tech Ventures. All rights reserved.
+        <p className="text-sm mb-4 sm:mb-0">
+          Developed in{" "}
+          <Link
+            target="_blank"
+            className="text-primary hover:underline"
+            to={"https://globallinkstechnologies.com/"}
+          >
+            Global Links Technologies
+          </Link>{" "}
+          | © 2024 MHS Tech Ventures. All rights reserved.
         </p>
+        <MrCard />
         <nav className="flex gap-4 sm:gap-6 mt-4 sm:mt-0">
           {[
             { name: "Terms of Service", link: "/terms-of-services" },

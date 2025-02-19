@@ -3,11 +3,16 @@ import { Button } from "@/components/ui/button";
 import { DetailsHeroSection, Heading } from "@/components";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import api from "@/http/api";
+import { Send } from "lucide-react";
+import { FaCheck } from "react-icons/fa";
 
 export default function ContactUs() {
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    phoneNumber: "",
     email: "",
     subject: "",
     message: "",
@@ -15,13 +20,34 @@ export default function ContactUs() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic
-    console.log(formData);
+    setLoading(true);
+    api
+      .post("contact-us", { ...formData, domain_key: 3 })
+      .then((response) => {
+        if (response.success) {
+          setSubmitted(true);
+          setFormData({ name: "", email: "", subject: "", message: "" });
+          setError("");
+        } else {
+          setError(
+            response.message ||
+              "There was an issue with your submission. Please try again."
+          );
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+
+        setError(error?.message || "An error occurred. Please try again.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -69,74 +95,80 @@ export default function ContactUs() {
       {/* Contact Form and Map Section */}
       <section className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Contact Form */}
-        <div>
-          <h2 className="text-3xl font-bold text-center mb-8">
-            <Heading> Send Us a Message</Heading>
-          </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
-                placeholder="Enter your name"
-              />
-              <input
-                type="number"
-                id="phoneNumber"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
-                placeholder="Enter your phone number"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
-                placeholder="Enter subject"
-              />
-            </div>
-            <div>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="5"
-                className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground resize-none"
-                placeholder="Type your message"
-              ></textarea>
-            </div>
-            <Button type="submit" size="lg" className="w-full">
-              Send Message
+        {submitted ? (
+          <div className="w-full max-w-lg m-auto flex flex-col items-center gap-4">
+            <FaCheck size={60} className="text-green-500 mb-4" />
+            <h1 className="text-2xl text-foreground">
+              You message send successfully
+            </h1>
+            <Button variant="" asChild>
+              <Link to="/">Go to Home</Link>
             </Button>
-          </form>
-        </div>
+          </div>
+        ) : (
+          <div>
+            <h2 className="text-3xl font-bold text-center mb-8">
+              <Heading> Send Us a Message</Heading>
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
+                  placeholder="Enter your name"
+                />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground"
+                  placeholder="Enter subject"
+                />
+              </div>
+              <div>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="5"
+                  className="w-full px-4 py-3 bg-primary/10 border border-primary/20 rounded focus:outline-none text-foreground resize-none"
+                  placeholder="Type your message"
+                ></textarea>
+              </div>
+              {error && <p className="text-red-500">{error}</p>}
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={loading}
+              >
+                {loading ? "Sending..." : <>Send Message</>}
+              </Button>
+            </form>
+          </div>
+        )}
 
         {/* Map Section */}
         <div className="flex justify-center items-center">

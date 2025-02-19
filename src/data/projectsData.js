@@ -12,7 +12,7 @@ export const projectsData = [
     description:
       "A dynamic web platform developed for Drive for Economic and Environmental Development (DEED), focusing on showcasing projects, initiatives, and partnerships while engaging donors and stakeholders.",
     image: "/images/projects/2.webp",
-    liveUrl: "https://mrdeed.vercel.app/",
+    liveUrl: "https://deed.com.pk/",
     codeUrl: "",
   },
   {
@@ -20,7 +20,7 @@ export const projectsData = [
     description:
       "A modern IT services website for an innovative startup, offering information on cutting-edge software solutions, including web and mobile app development, software consultancy, and portal management systems.",
     image: "/images/projects/3.webp",
-    liveUrl: "https://gltech.vercel.app/",
+    liveUrl: "https://globallinkstechnologies.com/",
     codeUrl: "",
   },
 ];
