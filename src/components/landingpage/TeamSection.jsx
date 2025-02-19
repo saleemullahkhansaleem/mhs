@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SectionContainer } from "..";
 import { teamMembers } from "@/data";
 import { Link } from "react-router-dom";
@@ -62,7 +63,7 @@ function TeamBox({ member, index }) {
               rel="noopener noreferrer"
               className="text-white hover:text-primary"
             >
-              <FaTwitter size={20} />
+              <FaXTwitter size={20} />
             </Link>
           )}
           {member.github && (
