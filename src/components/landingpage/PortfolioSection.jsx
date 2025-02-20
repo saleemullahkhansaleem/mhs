@@ -14,7 +14,7 @@ export default function PortfolioSection() {
       btnUrl="/portfolio"
       className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
     >
-      {projectsData.map((project, index) => (
+      {projectsData.slice(0, 3).map((project, index) => (
         <ProjectCard project={project} index={index} key={index} />
       ))}
     </SectionContainer>
